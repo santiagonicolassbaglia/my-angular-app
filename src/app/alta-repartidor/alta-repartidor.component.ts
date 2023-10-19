@@ -56,7 +56,7 @@ paises: any  = [];
     });
   }
 
-  // Agrega esta función para manejar la selección de países
+  // Agrega esta función para manejar la selección de países holaa
   selectCountry(country: any) {
     this.selectedCountry = country;
   }
