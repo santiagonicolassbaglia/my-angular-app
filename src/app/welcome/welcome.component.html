@@ -1,0 +1,12 @@
+<h1 class="welcome-title">Bienvenido a mi aplicación Angular</h1>
+<div class="welcome-container">
+    <h2 class="welcome-title">Bienvenido, {{ userData.login }}</h2>
+    <img class="github-avatar" [src]="userData.avatar_url" alt="Avatar">
+    <p>Nombre de usuario: {{ userData.login }}</p>
+    <p>Nombre completo: {{ userData.name }}</p>
+    <p>Ubicación: {{ userData.location }}</p>
+  </div>
+
+<div>
+    
+    <router-outlet> </router-outlet>

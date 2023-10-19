@@ -1,0 +1,48 @@
+<form [formGroup]="altaRepartidorForm" (ngSubmit)="submitForm()">
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" formControlName="dni">
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" formControlName="nombre">
+  
+    <label for="edad">Edad:</label>
+    <input type="text" id="edad" formControlName="edad">
+  
+    <label for="capacidad">Capacidad:</label>
+    <input type="text" id="capacidad" formControlName="capacidad">
+   
+   <label for="pais">País de origen:</label>
+<select formControlName="pais">
+  <option value="" disabled selected>Selecciona un país</option>
+  <option *ngFor="let pais of paises" [value]="pais.nombre">{{pais.nombre}}</option>
+</select>
+<div>
+    <label for="unidadPropia">Unidad propia:</label>
+    <input type="text" id="unidadPropia" formControlName="unidadPropia">
+  </div>
+    <button type="submit">Dar de alta</button>
+  </form>
+   
+  <div class="card text-center m-1" *ngFor="let pais of paises">
+    <label class="card-header h1"> {{pais.nombre}}</label>
+    <div class="card-body">
+      <p>País: <b>{{pais.esIndependiente ? 'Independiente' : 'Dependiente'}}</b></p>
+      <img src="{{pais.bandera}}" alt="bandera" width="130px">
+      <!-- Agrega un enlace a un mapa si es necesario -->
+      <a href="{{pais.mapa}}" target="_blank">Ver mapa</a>
+      <abbr title="Delimitación del mapa">MAPA</abbr>
+  
+      <p><b>Capital:</b> {{pais.capital}}</p>
+      <p><b>Moneda:</b> {{pais.moneda | json}}</p>
+      <p><b>Idioma:</b> {{pais.idioma}}</p>
+      <p><b>Superficie:</b> {{pais.superficie}}</p>
+      <p><b>Población:</b> {{pais.poblacion}}</p>
+      <p><b>Independencia:</b> {{pais.independencia}}</p>
+      <p><b>Presidente:</b> {{pais.presidente}}</p>
+      <p><b>Imagen:</b> {{pais.imagen}}</p>
+      <p><b>Descripción:</b> {{pais.descripcion}}</p>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>
+  

@@ -1,0 +1,8 @@
+<form [formGroup]="altaRepartidorForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="dni">DNI</label>
+      <input type="text" id="dni" formControlName="dni" class="form-control">
+    </div>
+    <!-- Otros campos del formulario -->
+    <button type="submit" class="btn btn-primary">Dar de alta</button>
+  </form>
