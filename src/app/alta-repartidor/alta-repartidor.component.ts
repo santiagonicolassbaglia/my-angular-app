@@ -31,7 +31,7 @@ paises: any  = [];
     if (this.altaRepartidorForm.valid) {
       const formData = this.altaRepartidorForm.value;
       const selectedCountry = formData.pais; // País seleccionado
-      // Continúa con la lógica para enviar los datos al servidor.
+
     }
   }
 
